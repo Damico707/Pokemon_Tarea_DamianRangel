@@ -1,6 +1,6 @@
 document.getElementById("search-bar").addEventListener("keydown",
      function() {
-        let nombre = document.getElementById("search-bar").value.toLowerCase(); /*para minisculas y tal*/
+        let nombre = document.getElementById("search-bar").value; /*para minisculas y tal*/
         let linksito = "https://pokeapi.co/api/v2/pokemon/" + nombre;
         console.log(linksito);
 
