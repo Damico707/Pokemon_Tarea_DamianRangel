@@ -1,35 +1,109 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap&#39;');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Oxanium', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
 }
 
-body{
+body {
     background-color: rgb(185, 213, 215);
-    background-image:url(../media/fondo.png);
+    background-image: url(../media/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-blend-mode:multiply;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.image{
-display: flex;
-flex-direction: column;
-align-items: center;
+.image {
+    position: relative;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.imagen-base {
+    width: 100%;
+}
+
+.pokemons {
+    position: absolute;
+    top: 25%;
+    left: 52%;
+    transform: translateX(-50%);
+    width: 52%;
+}
+
+.pokemons img {
+    width: 80%;
+    image-rendering: pixelated;  /*admito que nose como pero le mejora la calidad*/
+}
+
+.number {
+    position: absolute;
+    top: 55%;
+    left: 38%;
+    font-size: 18px;
+    color: #333;
+}
+
+.name {
+    position: absolute;
+    top: 55%;
+    left: 58%;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+#search-bar {
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 45px;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: -3px 4px 2px rgb(139, 139, 139);
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+input::placeholder {
+    color: #888;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.botones {
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
 
 .botones button {
     background-color: rgb(57, 57, 57);
     border: 1px solid black;
     color: white;
-    width: 150px;
-    height: 50px;
-    font-size: 20px;
+    width: 130px;
+    height: 48px;
+    font-size: 18px;
+    box-shadow: -4px 6px 2px black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Oxanium', cursive;
 }
 
-
+.botones button:hover {
+    scale: 0.93;
+}
