@@ -2,8 +2,8 @@ document.getElementById("search-bar").addEventListener("keydown",
      function() {
         let nombre = document.getElementById("search-bar").value; /*para minisculas y tal*/
         let linksito = "https://pokeapi.co/api/v2/pokemon/" + nombre;
-        console.log(linksito);
-
+        let next = Number(linksito) + 1;
+        console.log(next);
         fetch(linksito)
         .then(function(res) { return res.json(); })
         .then((data) => {
@@ -24,3 +24,11 @@ document.getElementById("search-bar").addEventListener("keydown",
             document.querySelector(".pokemons img").src = "";
         });
 });
+
+const previo =document.getElementById("prev")
+    previo.addEventListener("click")
+
+const next = document.getElementById("next")
+    next.addEventListener("click", function() {
+        
+})
